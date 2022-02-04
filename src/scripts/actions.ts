@@ -1,3 +1,4 @@
+import type App from './app'
 import ICS from './ics'
 import { CHEMIN_ACCUEIL } from './router'
 
@@ -59,7 +60,7 @@ export function bindImpression(element, app) {
     })
 }
 
-export function bindSuppressionTotale(element, app) {
+export function bindSuppressionTotale(element: HTMLElement, app: App) {
     element.addEventListener('click', (event) => {
         event.preventDefault()
         app.plausible('Suppression totale')
