@@ -69,6 +69,7 @@ export function bindSuppressionTotale(element, app) {
                     if (app.router.lastRouteResolved().url !== CHEMIN_ACCUEIL) {
                         app.router.navigate(CHEMIN_ACCUEIL)
                     } else {
+                        // @ts-expect-error
                         window.location.reload(true)
                     }
                 }
